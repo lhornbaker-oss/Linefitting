@@ -1,4 +1,4 @@
-from fitting_functions import*
+from fitting_functions import *
 #a
 m=2
 x=3
