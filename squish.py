@@ -8,4 +8,10 @@ data = np.loadtxt("Weight.csv", delimiter=",", dtype=str)
 x = data[1:, 0].astype(np.float32)
 y = data[1:, 1].astype(np.float32)
 print("y = ", y)
-print("x = ", x)    
+print("x = ", x)
+
+params, params_cov = scipy.optimize.curve_fit(linear, x, y)
+m = params[0]
+b = params[1]
+
+print_equation(m,b,"height","weight")
